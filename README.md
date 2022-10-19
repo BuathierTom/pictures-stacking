@@ -1,18 +1,24 @@
 # SAE_C2
 
-# Membres du groupe
+## Membres du binôme : 
 
 > Buathier Tom TPC
 > Gilleron Quentin TPC
 
 # 
 
-# Langages de programmation utilisé
+## Environnement logiciel et langage : 
 
 > Python
 
 #
 
-# Bibliothèques utilisé
+## Bibliothèques utilisé : [Astropy](https://www.astropy.org/)
 
-> Astropy
+#
+
+## TO-DO (Obligatoire) :
+
+* empilement par `moyenne`
+* empilement par `médiane`
+* empilement avec rejet des `outliers` (plusieurs méthodes possibles)
