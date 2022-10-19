@@ -1,7 +1,5 @@
 # SAE_C2
 
-#
-
 # Membres du groupe
 
 > Buathier Tom TPC
@@ -15,6 +13,6 @@
 
 #
 
-# Bibliothèque utilisé
+# Bibliothèques utilisé
 
 > Astropy
