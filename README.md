@@ -2,8 +2,8 @@
 
 ## Membres du binôme : 
 
-> Buathier Tom TPC
-> Gilleron Quentin TPC
+> * Buathier Tom TPC
+> * Gilleron Quentin TPC
 
 # 
 
