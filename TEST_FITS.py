@@ -8,7 +8,7 @@ image_file = get_pkg_data_filename('./fits_tests/M13_blue/M13_blue_0001.fits')
 
 hdu_list = fits.open(image_file)
 hdu_list.info()
-image_data = hdu_list[0].data
+image_data = hdu_list[0].data 
 print(type(image_data))
 print(image_data.shape)
 hdu_list.close()
