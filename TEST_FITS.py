@@ -15,8 +15,6 @@ hdu_list.close()
 
 
 image_data = fits.getdata(image_file)
-print(type(image_data)) # Show the Python type for image_data
-print(image_data.shape) # Show the number of pixels per side in the 2-D image
-plt.imshow(image_data, cmap='gray')
+plt.imshow(image_data, cmap='winter_r')
 plt.colorbar()
 plt.show(block=True)
