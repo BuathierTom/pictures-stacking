@@ -5,17 +5,11 @@
 > * Buathier Tom TPC
 > * Gilleron Quentin TPC
 
-# 
-
 ## Environnement logiciel et langage : 
 
 > Python
 
-#
-
 ## Bibliothèques utilisé : [Astropy](https://www.astropy.org/)
-
-#
 
 ## TO-DO (Obligatoire) :
 
