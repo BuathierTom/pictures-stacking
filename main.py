@@ -8,11 +8,13 @@ def moyenne():
     hdu_img1 = fits.open('./fits_tests/mini/mini0.fits')
     hdu_img1.info()
     image_data1 = hdu_img1[0].data #type: ignore
+    plt.imshow(image_data1)
     hdu_img1.close()
 
     hdu_img2 = fits.open('./fits_tests/mini/mini1.fits')
     hdu_img2.info()
     image_data2 = hdu_img2[0].data #type: ignore
+    plt.imshow(image_data2)
     hdu_img2.close()
 
 
@@ -29,3 +31,5 @@ def moyenne():
     plt.show(block=True)
     
 if __name__ == '__main__':
+    
+    print(moyenne())
