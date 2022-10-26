@@ -15,7 +15,7 @@ hdu_list.close()
 
 
 image_data = fits.getdata(image_file)
-plt.imshow(image_data, cmap='winter_r') #type: ignore
+plt.imshow(image_data) #type: ignore
 plt.colorbar()
 plt.show(block=True)
 
