@@ -16,9 +16,9 @@
 
 ## TO-DO (Obligatoire) :
 
-* empilement par `moyenne` *(En cours)*
-* empilement par `médiane` *(En cours)*
-* empilement avec rejet des `outliers` (plusieurs méthodes possibles) *(En cours)*
+* Empilement par `moyenne` *(Terminé)*
+* Empilement par `médiane` *(Terminé)*
+* Empilement avec rejet des `outliers` (plusieurs méthodes possibles) *(En cours)*
 
 ## TO-DO (Complémentaire) :
 

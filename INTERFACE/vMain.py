@@ -6,8 +6,7 @@ class vMain(QWidget):
     
     def  __init__(self):
         super().__init__()
-        
-        
+        self.setWindowTitle('SAE C2') 
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
         self.sousTopLayout : QHBoxLayout = QHBoxLayout()
