@@ -9,6 +9,7 @@ class vOuvrir(QWidget):
         super().__init__()
         
         self.setWindowTitle('SAE C2') 
+        self.chemins = []
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
         self.sousTopLayout : QHBoxLayout = QHBoxLayout()
@@ -34,7 +35,7 @@ class vOuvrir(QWidget):
         
     def cbOuvrir(self):
         self.path = QFileDialog.getOpenFileNames( self, "Ouvrir", dirname( __file__ ), "Fichier FITS ( *.fits )" )
-        self.deleteLater()
+        self.chemins.append(self.path)
         print(self.path)
 
 if __name__ == "__main__":
