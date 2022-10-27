@@ -34,6 +34,6 @@ def moyenne(image: list):
     
 if __name__ == '__main__':
     
-    images = ['./fits_tests/mini/mini0.fits', './fits_tests/mini/mini0.fits']
+    images = ['./fits_tests/mini/mini1.fits', './fits_tests/mini/mini0.fits']
     
     print(moyenne(images))
