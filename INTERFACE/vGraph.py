@@ -6,7 +6,8 @@ import main as m
 class vGraph(QWidget):
     def  __init__(self):    
         super().__init__()
-        
+        #----------------- IMPORT -----------------
+        self.vue : vOuvrir.vOuvrir = vOuvrir.vOuvrir() 
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
         self.graphLayout : QHBoxLayout = QHBoxLayout()
@@ -32,13 +33,13 @@ class vGraph(QWidget):
         self.boutonMed.clicked.connect(self.cbMediane)
         self.boutonOutliers.clicked.connect(self.cbOutliers)
         
-    def cbMoyenne(self, images):
-        m.moyenne(images)
-    
-    def cbMediane(self, images):
+    def cbMoyenne(self, chemin: list):
+        m.moyenne(chemin)
+        
+    def cbMediane(self, images: list):
         m.median(images)
     
-    def cbOutliers(self, images):
+    def cbOutliers(self, images: list):
         print("-- TQT FRR CA MARCHE --")
         
         

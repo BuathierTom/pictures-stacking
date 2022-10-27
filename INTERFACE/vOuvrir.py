@@ -28,7 +28,7 @@ class vOuvrir(QWidget):
         self.menuLayout.addWidget(self.labelOuvrir)
         self.sousTopLayout.addWidget(self.ouvrirPhotos)
         #----------------- VOILA -----------------
-        self.show() #INDISPENSABLE
+        # self.show() #INDISPENSABLE
         #----------------- CALLBACK -----------------
         self.ouvrirPhotos.clicked.connect(self.cbOuvrir)
         

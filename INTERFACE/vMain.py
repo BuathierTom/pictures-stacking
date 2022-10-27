@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QApplication, QFileDialog, QLineEdit, QLabel
 from PyQt6.QtCore import pyqtSignal
 import vOuvrir
+import vGraph
 
 class vMain(QWidget):
     
@@ -13,12 +14,14 @@ class vMain(QWidget):
         self.selectionLayout : QHBoxLayout = QHBoxLayout()
         
         self.vuOuvrir : vOuvrir.vOuvrir = vOuvrir.vOuvrir() 
+        self.vueGr : vGraph.vGraph = vGraph.vGraph() 
         
         #----------------- CONTAINERS -----------------
         self.cSelection : QWidget = QWidget() ; self.cSelection.setLayout(self.selectionLayout)
         self.cSousTopLayout : QWidget = QWidget() ; self.cSousTopLayout.setLayout(self.sousTopLayout)
         #----------------- PLACEMENT PHASE 0 -----------------
         self.selectionLayout.addWidget(self.vuOuvrir)
+        self.sousTopLayout.addWidget(self.vueGr)
         self.topLayout.addWidget(self.cSelection)
         self.topLayout.addWidget(self.cSousTopLayout)
         

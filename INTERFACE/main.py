@@ -63,8 +63,8 @@ def median(image: list):
 if __name__ == '__main__':
     
     images = ['./fits_tests/mini/mini1.fits', './fits_tests/mini/mini0.fits']
-    
+    print(moyenne(images))
     print(median(images))
     
     
-    print(moyenne(images))
+    
