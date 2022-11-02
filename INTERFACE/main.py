@@ -52,7 +52,7 @@ def median(image: list):
         hdu_img.close()
         #-------------- On rajoute la data dans une liste pour la concatener plus tard --------------
         image_list.append(image_data)
-        
+        print(image_data)
     #-------------- Moyenne des couleurs et affichages --------------
     final_image = np.median(image_list, axis=0)
     

@@ -23,6 +23,8 @@ class vOuvrir(QWidget):
         #----------------- LES BOUTONS -----------------
         self.labelOuvrir : QLabel = QLabel("Selectionner vos photos")
         self.ouvrirPhotos : QPushButton = QPushButton("Ouvrir les photos")
+        for i in range(len(self.chemins)):    
+            self.chemin_label : QLabel = QLabel(self.chemins[i])
         
         #----------------- PLACEMENT PHASE 1 -----------------
         self.menuLayout.addWidget(self.labelOuvrir)

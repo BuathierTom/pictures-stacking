@@ -26,7 +26,7 @@ class vMain(QWidget):
         self.topLayout.addWidget(self.cSousTopLayout)
         
         self.show()
-            
+        
         
         
 if __name__ == "__main__":
