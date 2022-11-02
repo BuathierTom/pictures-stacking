@@ -32,6 +32,9 @@ def moyenne(image: list):
     plt.colorbar()
     plt.show(block=True)
     
+    
+    
+    
 def median(image: list):
     """
     Fonction qui fais la median des couleurs des images données en paramètre. 

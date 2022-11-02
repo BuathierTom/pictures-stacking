@@ -4,7 +4,7 @@ from PyQt6.QtCore import pyqtSignal
 from os.path import dirname
 import main as m
 
-class vTEST(QWidget):
+class vMain(QWidget):
     
     def  __init__(self):
         super().__init__()
@@ -76,5 +76,5 @@ class vTEST(QWidget):
 if __name__ == "__main__":
     import sys
     app = QApplication(sys.argv)
-    w0 : vTEST = vTEST()
+    w0 : vMain = vMain()
     sys.exit(app.exec()) 
