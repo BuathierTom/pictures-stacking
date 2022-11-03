@@ -26,7 +26,7 @@ Pour pouvoir lancer l'interface lancer le fichier `vMain.py` puis sélectionner 
 
 * Empilement par `moyenne` *(Terminé)*
 * Empilement par `médiane` *(Terminé)*
-* Empilement avec rejet des `outliers` (plusieurs méthodes possibles) *(En cours)*
+* Empilement avec rejet des `outliers` *(En cours)*
 
 ## TO-DO (Complémentaire) :
 
