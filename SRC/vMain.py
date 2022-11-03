@@ -1,5 +1,6 @@
 from os import remove
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QApplication, QFileDialog, QLineEdit, QLabel
+from PyQt6 import QtGui
 from PyQt6.QtCore import pyqtSignal
 from os.path import dirname
 import main as m
@@ -10,6 +11,8 @@ class vMain(QWidget):
         super().__init__()
         
         self.setWindowTitle('SAE C2') 
+        self.setWindowIcon(QtGui.QIcon('hand.ico'))
+        
         self.chemins = []
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
