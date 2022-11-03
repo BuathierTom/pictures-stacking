@@ -32,6 +32,9 @@ def moyenne(image: list):
     plt.colorbar()
     plt.show(block=True)
     
+    
+    
+    
 def median(image: list):
     """
     Fonction qui fais la median des couleurs des images données en paramètre. 
@@ -52,7 +55,7 @@ def median(image: list):
         hdu_img.close()
         #-------------- On rajoute la data dans une liste pour la concatener plus tard --------------
         image_list.append(image_data)
-        
+        print(image_data)
     #-------------- Moyenne des couleurs et affichages --------------
     final_image = np.median(image_list, axis=0)
     
@@ -62,7 +65,9 @@ def median(image: list):
     
 if __name__ == '__main__':
     
-    images = ['../fits_tests/mini/mini1.fits', '../fits_tests/mini/mini1.fits']
-    
-    print(median(images))
+    images = ['./fits_tests/ngc7000/NGC-7000_00.fits', './fits_tests/ngc7000/NGC-7000_01.fits']
     print(moyenne(images))
+    print(median(images))
+    
+    
+    

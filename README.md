@@ -16,11 +16,12 @@
 
 ## TO-DO (Obligatoire) :
 
-* empilement par `moyenne` *(En cours)*
-* empilement par `médiane` *(En cours)*
-* empilement avec rejet des `outliers` (plusieurs méthodes possibles) *(En cours)*
+* Empilement par `moyenne` *(Terminé)*
+* Empilement par `médiane` *(Terminé)*
+* Empilement avec rejet des `outliers` (plusieurs méthodes possibles) *(En cours)*
 
 ## TO-DO (Complémentaire) :
 
-* Interface PyQt6
-* Enregistrement des images compilées
+* Interface PyQt6 *(En cours)*
+* Enregistrement des images compilées *(En cours)*
+* Tester les programmes avec un petits main à l'interieur *(En cours)*
