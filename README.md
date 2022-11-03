@@ -1,5 +1,14 @@
 # SAE_C2
 
+## Consigne d'utilisation
+
+> Le lancement :
+
+Pour pouvoir lancer l'interface lancer le fichier `vMain.py` puis sélectionner les images avec lesquelles vous voulez faire les empilements que vous souhaitez.
+
+**Attention ! Si vous voulez changer de selection de photo, il faudra relancer le programme et selectionner les images que vous souhaitez utiliser**
+
+
 ## Membres du binôme : 
 
 > * Buathier Tom TPC
@@ -24,4 +33,4 @@
 
 * Interface PyQt6 *(En cours)*
 * Enregistrement des images compilées *(En cours)*
-* Tester les programmes avec un petits main à l'interieur *(En cours)*
+* Tester les programmes avec un petits main à l'interieur *(Terminé)*
