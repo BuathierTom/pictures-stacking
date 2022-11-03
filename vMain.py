@@ -61,7 +61,7 @@ class vMain(QWidget):
         for i in range(len(self.chemins)):
             m.median(self.chemins[i][0])
     
-    def cbOutliers(self, images: list):
+    def cbOutliers(self):
         print("-- TQT FRR CA MARCHE --")
         
         
