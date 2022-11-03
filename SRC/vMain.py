@@ -1,5 +1,6 @@
 from os import remove
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QApplication, QFileDialog, QLineEdit, QLabel
+from PyQt6 import QtGui
 from PyQt6.QtCore import pyqtSignal
 from os.path import dirname
 import main as m
@@ -14,37 +15,47 @@ class vMain(QWidget):
         self.chemins = []
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
-        self.sousTopLayout : QHBoxLayout = QHBoxLayout()
-        self.menuLayout : QHBoxLayout = QHBoxLayout()
+        self.ouvrirPhotoLayout : QHBoxLayout = QHBoxLayout()
+        self.afficherPhotoLayout : QHBoxLayout = QHBoxLayout()
         #---
         self.graphLayout : QHBoxLayout = QHBoxLayout()
-        self.boutonlayout : QHBoxLayout = QHBoxLayout()
+        self.boutonslayout : QHBoxLayout = QHBoxLayout()
         #----------------- CONTAINERS -----------------
-        self.cSousTopLayout : QWidget = QWidget() ; self.cSousTopLayout.setLayout(self.sousTopLayout)
+        self.cOuvrirPhotoLayout : QWidget = QWidget() ; self.cOuvrirPhotoLayout.setLayout(self.ouvrirPhotoLayout)
+        #---
+        self.cAfficherPhotoLayout : QWidget = QWidget() ; self.cAfficherPhotoLayout.setLayout(self.afficherPhotoLayout)
         #---
         self.cGraphLayout : QWidget = QWidget() ; self.cGraphLayout.setLayout(self.graphLayout)
-        self.cBoutonlayout : QWidget = QWidget() ; self.cBoutonlayout.setLayout(self.boutonlayout)
+        self.cBoutonslayout : QWidget = QWidget() ; self.cBoutonslayout.setLayout(self.boutonslayout)
         #----------------- PLACEMENT PHASE LAYOUTS -----------------
-        self.topLayout.addWidget(self.cSousTopLayout)
+        self.topLayout.addWidget(self.cOuvrirPhotoLayout)
+        #---
+        self.topLayout.addWidget(self.cAfficherPhotoLayout)
         #---
         self.topLayout.addWidget(self.cGraphLayout)
-        self.topLayout.addWidget(self.cBoutonlayout)
+        self.topLayout.addWidget(self.cBoutonslayout)
         #----------------- LES BOUTONS -----------------
         self.ouvrirPhotos : QPushButton = QPushButton("Ouvrir les photos 🗂️")
+        #---
+        self.afficherPhotos : QPushButton = QPushButton("Afficher les images")
         #---
         self.boutonMoy : QPushButton = QPushButton("Empilement par moyenne")
         self.boutonMed : QPushButton = QPushButton("Empilement par médiane")
         self.boutonOutliers : QPushButton = QPushButton("Empilement par rejet des outliers")            
         #----------------- PLACEMENT PHASE BOUTONS -----------------
-        self.sousTopLayout.addWidget(self.ouvrirPhotos)
+        self.ouvrirPhotoLayout.addWidget(self.ouvrirPhotos)
         #---
-        self.boutonlayout.addWidget(self.boutonMoy)
-        self.boutonlayout.addWidget(self.boutonMed)
-        self.boutonlayout.addWidget(self.boutonOutliers)
+        self.afficherPhotoLayout.addWidget(self.afficherPhotos)
+        #---
+        self.boutonslayout.addWidget(self.boutonMoy)
+        self.boutonslayout.addWidget(self.boutonMed)
+        self.boutonslayout.addWidget(self.boutonOutliers)
         #----------------- VOILA -----------------
         self.show() #INDISPENSABLE
         #----------------- CALLBACK -----------------
         self.ouvrirPhotos.clicked.connect(self.cbOuvrir)
+        #---
+        self.afficherPhotos.clicked.connect(self.cbAfficher)
         #---
         self.boutonMoy.clicked.connect(self.cbMoyenne)
         self.boutonMed.clicked.connect(self.cbMediane)
@@ -68,6 +79,9 @@ class vMain(QWidget):
         
         print(self.chemins)
         print(self.path)
+        
+    def cbAfficher(self):
+        print("FERME TA GUEULE")
         
         
 if __name__ == "__main__":

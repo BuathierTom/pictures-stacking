@@ -23,16 +23,50 @@ class vOuvrir(QWidget):
         #----------------- LES BOUTONS -----------------
         self.labelOuvrir : QLabel = QLabel("Selectionner vos photos")
         self.ouvrirPhotos : QPushButton = QPushButton("Ouvrir les photos")
-        for i in range(len(self.chemins)):    
-            self.chemin_label : QLabel = QLabel(self.chemins[i])
+
         
         #----------------- PLACEMENT PHASE 1 -----------------
         self.menuLayout.addWidget(self.labelOuvrir)
         self.sousTopLayout.addWidget(self.ouvrirPhotos)
         #----------------- VOILA -----------------
-        # self.show() #INDISPENSABLE
+        self.show() #INDISPENSABLE
         #----------------- CALLBACK -----------------
         self.ouvrirPhotos.clicked.connect(self.cbOuvrir)
+        
+        
+        #----------------- LAYOUTS -----------------
+        self.sd : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.sd)
+        self.graphLayout : QHBoxLayout = QHBoxLayout()
+        self.boutonlayout : QHBoxLayout = QHBoxLayout()
+        #----------------- CONTAINERS -----------------
+        self.cGraphLayout : QWidget = QWidget() ; self.cGraphLayout.setLayout(self.graphLayout)
+        self.cBoutonlayout : QWidget = QWidget() ; self.cBoutonlayout.setLayout(self.boutonlayout)
+        #----------------- PLACEMENT PHASE 0 -----------------
+        self.sd.addWidget(self.cGraphLayout)
+        self.sd.addWidget(self.cBoutonlayout)
+        #----------------- LES BOUTONS -----------------
+        self.boutonMoy : QPushButton = QPushButton("Empilement par moyenne")
+        self.boutonMed : QPushButton = QPushButton("Empilement par médiane")
+        self.boutonOutliers : QPushButton = QPushButton("Empilement par rejet des outliers")
+        #----------------- ON PLACE -----------------
+        self.boutonlayout.addWidget(self.boutonMoy)
+        self.boutonlayout.addWidget(self.boutonMed)
+        self.boutonlayout.addWidget(self.boutonOutliers)
+        #----------------- VOILA -----------------
+        self.show() #INDISPENSABLE
+        #----------------- CALLBACK -----------------
+        self.boutonMoy.clicked.connect(self.cbMoyenne)
+        self.boutonMed.clicked.connect(self.cbMediane)
+        self.boutonOutliers.clicked.connect(self.cbOutliers)
+        
+    def cbMoyenne(self, chemin: list):
+        print("ttt")
+        
+    def cbMediane(self, images: list):
+        print("fd")
+        
+    def cbOutliers(self, images: list):
+        print("-- TQT FRR CA MARCHE --")
         
         
     def cbOuvrir(self):

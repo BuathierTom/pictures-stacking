@@ -8,15 +8,14 @@ Pour pouvoir lancer l'interface lancer le fichier `vMain.py` puis sélectionner 
 
 **Attention ! Si vous voulez changer de selection de photo, il faudra relancer le programme et selectionner les images que vous souhaitez utiliser**
 
-
 ## Membres du binôme : 
 
-> * Buathier Tom TPC
-> * Gilleron Quentin TPC
+* Buathier Tom TPC
+* Gilleron Quentin TPC
 
 ## Environnement logiciel et langage : 
 
-> Python
+* Python
 
 ## Bibliothèques utilisé : 
 
@@ -31,6 +30,13 @@ Pour pouvoir lancer l'interface lancer le fichier `vMain.py` puis sélectionner 
 
 ## TO-DO (Complémentaire) :
 
-* Interface PyQt6 *(En cours)*
-* Enregistrement des images compilées *(En cours)*
-* Tester les programmes avec un petits main à l'interieur *(Terminé)*
+- Interface PyQt6: *(En cours)*
+    - Pouvoir selectionner les photos souhaitez dans un explorateur de fichiers *(Terminé)*
+
+    - Plusieurs boutons pour pouvoir faire les empilements par `moyenne`, `médiane` et `rejet des outliers`. *(Terminé)*
+
+    - Pouvoir afficher les images selectionner en cliquant sur un bouton *(En cours)*
+
+    - Enregistrer les images empilés avec un bouton *(En cours)*
+- Enregistrement des images compilées *(En cours)*
+- Tester les programmes avec un petits main à l'interieur *(Terminé)*
