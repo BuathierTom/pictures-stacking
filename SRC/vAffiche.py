@@ -5,6 +5,8 @@ class vAffiche(QWidget):
     def  __init__(self, chemins: list):
         super().__init__()
         
+        #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
+        
         self.show() #INDISPENSABLE
         

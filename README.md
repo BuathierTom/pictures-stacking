@@ -41,6 +41,7 @@ Lors de la sauvegarde d'un empilement en `png` dans l'interface grace à un bout
 
     - Pouvoir afficher les images selectionner en cliquant sur un bouton *(En cours)*
 
-    - Enregistrer les images empilés avec un bouton *(En cours)*
-- Enregistrement des images compilées *(En cours)*
+    - Enregistrer les images empilés en `.png` avec un bouton *(Terminé)*
+    
+- Enregistrement des images compilées *(Terminé)*
 - Tester les programmes avec un petits main à l'interieur *(Terminé)*
