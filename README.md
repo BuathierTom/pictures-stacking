@@ -8,6 +8,10 @@ Pour pouvoir lancer l'interface lancer le fichier `vMain.py` puis sélectionner 
 
 **Attention ! Si vous voulez changer de selection de photo, il faudra relancer le programme et selectionner les images que vous souhaitez utiliser**
 
+> La Sauvegarde d'image :
+
+Lors de la sauvegarde d'un empilement en `png` dans l'interface grace à un bouton prévu à cet effet, la figure s'affiche et s'enregistre en dehors du dossier où se trouve les fonctions et l'interface. Vous pouvez donc fermer la figure ouverte et regarder la sauvegarde de l'image dans le fichier avec le nom `EmpilementPar` *Moyenne*, *Mediane* ou encore *Outlier*`.png`.
+
 ## Membres du binôme : 
 
 * Buathier Tom TPC

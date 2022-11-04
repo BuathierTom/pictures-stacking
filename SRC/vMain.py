@@ -1,9 +1,13 @@
-from os import remove
+import os
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QApplication, QFileDialog, QLineEdit, QLabel
 from PyQt6 import QtGui
 from PyQt6.QtCore import pyqtSignal
 from os.path import dirname
 import main as m
+import vAffiche
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 
 class vMain(QWidget):
     
@@ -13,6 +17,8 @@ class vMain(QWidget):
         self.setWindowTitle('SAE C2') 
         
         self.chemins = []
+        #----------------- IMPORTS -----------------
+        # self.vueAffiche : vAffiche.vAffiche = vAffiche.vAffiche()
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
         self.ouvrirPhotoLayout : QHBoxLayout = QHBoxLayout()
@@ -20,6 +26,8 @@ class vMain(QWidget):
         #---
         self.graphLayout : QHBoxLayout = QHBoxLayout()
         self.boutonslayout : QHBoxLayout = QHBoxLayout()
+        #---          
+        self.saveMoy : QHBoxLayout = QHBoxLayout()
         #----------------- CONTAINERS -----------------
         self.cOuvrirPhotoLayout : QWidget = QWidget() ; self.cOuvrirPhotoLayout.setLayout(self.ouvrirPhotoLayout)
         #---
@@ -27,6 +35,8 @@ class vMain(QWidget):
         #---
         self.cGraphLayout : QWidget = QWidget() ; self.cGraphLayout.setLayout(self.graphLayout)
         self.cBoutonslayout : QWidget = QWidget() ; self.cBoutonslayout.setLayout(self.boutonslayout)
+        #---          
+        self.cSaveMoy : QWidget = QWidget() ; self.cSaveMoy.setLayout(self.saveMoy)
         #----------------- PLACEMENT PHASE LAYOUTS -----------------
         self.topLayout.addWidget(self.cOuvrirPhotoLayout)
         #---
@@ -34,6 +44,8 @@ class vMain(QWidget):
         #---
         self.topLayout.addWidget(self.cGraphLayout)
         self.topLayout.addWidget(self.cBoutonslayout)
+        #---          
+        self.topLayout.addWidget(self.cSaveMoy)
         #----------------- LES BOUTONS -----------------
         self.ouvrirPhotos : QPushButton = QPushButton("Ouvrir les photos 🗂️")
         #---
@@ -41,7 +53,9 @@ class vMain(QWidget):
         #---
         self.boutonMoy : QPushButton = QPushButton("Empilement par moyenne")
         self.boutonMed : QPushButton = QPushButton("Empilement par médiane")
-        self.boutonOutliers : QPushButton = QPushButton("Empilement par rejet des outliers")            
+        self.boutonOutliers : QPushButton = QPushButton("Empilement par rejet des outliers")  
+        #---
+        self.boutonSaveMoy : QPushButton = QPushButton("✨Sauvegarder l'image✨")         
         #----------------- PLACEMENT PHASE BOUTONS -----------------
         self.ouvrirPhotoLayout.addWidget(self.ouvrirPhotos)
         #---
@@ -50,6 +64,8 @@ class vMain(QWidget):
         self.boutonslayout.addWidget(self.boutonMoy)
         self.boutonslayout.addWidget(self.boutonMed)
         self.boutonslayout.addWidget(self.boutonOutliers)
+        #---          
+        self.saveMoy.addWidget(self.boutonSaveMoy)
         #----------------- VOILA -----------------
         self.show() #INDISPENSABLE
         #----------------- CALLBACK -----------------
@@ -60,6 +76,8 @@ class vMain(QWidget):
         self.boutonMoy.clicked.connect(self.cbMoyenne)
         self.boutonMed.clicked.connect(self.cbMediane)
         self.boutonOutliers.clicked.connect(self.cbOutliers)
+        #---          
+        self.boutonSaveMoy.clicked.connect(self.cbSaveMoy)
         
     def cbMoyenne(self):
         for i in range(len(self.chemins)):
@@ -81,8 +99,18 @@ class vMain(QWidget):
         print(self.path)
         
     def cbAfficher(self):
-        print("FERME TA GUEULE")
+        self.vueAffiche : vAffiche.vAffiche = vAffiche.vAffiche(self.chemins)
         
+        
+    def cbSaveMoy(self):
+        fig = plt.figure()
+        for i in range(len(self.chemins)):
+            fig = plt.figure(m.moyenne(self.chemins[i][0]))
+            
+        plt.ion()
+        plt.title("EmpilementParMoyenne")
+        plt.close(fig)
+        plt.savefig("EmpilementParMoyenne.png")
         
 if __name__ == "__main__":
     import sys
