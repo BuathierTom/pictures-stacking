@@ -11,7 +11,7 @@ class vMain(QWidget):
         super().__init__()
         
         self.setWindowTitle('SAE C2') 
-        
+        self.resize(300, 200)
         self.chemins = []
         #----------------- LAYOUTS -----------------
         self.topLayout : QVBoxLayout = QVBoxLayout() ; self.setLayout(self.topLayout)
