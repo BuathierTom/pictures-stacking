@@ -22,12 +22,11 @@ def moyenne(image: list):
         hdu_img.close()
         #-------------- On rajoute la data dans une liste pour la concatener plus tard --------------
         image_list.append(image_data)
-        
     #-------------- Moyenne des couleurs et affichages --------------
     final_image = np.zeros(shape=image_list[0].shape)
     for image in image_list:
         final_image += image
-
+    #-------------- Affichage de l'image empilés --------------
     plt.imshow(final_image)
     plt.colorbar()
     plt.show(block=True)
@@ -55,14 +54,15 @@ def median(image: list):
         print(image_data)
     #-------------- Moyenne des couleurs et affichages --------------
     final_image = np.median(image_list, axis=0)
-    
+    #-------------- Affichage de l'image empilés --------------
     plt.imshow(final_image)
     plt.colorbar()
     plt.show(block=True)
         
 if __name__ == '__main__':
+    # Chemins a changer si ça ne fonctionne pas ou si vous voulez voir d'autre images
     
-    images = ['D:/OneDrive/BUT/SAE/SAE_S3/SAE_C2/SRC/fits_tests/mini/mini0.fits', 'D:/OneDrive/BUT/SAE/SAE_S3/SAE_C2/SRC/fits_tests/mini/mini1.fits']
+    images = ['./fits_tests/mini/mini0.fits', './fits_tests/mini/mini1.fits']
     print(moyenne(images))
     print(median(images))
     
