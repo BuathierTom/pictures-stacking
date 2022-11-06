@@ -39,9 +39,6 @@ Lors de la sauvegarde d'un empilement en `png` dans l'interface grace à un bout
 
     - Plusieurs boutons pour pouvoir faire les empilements par `moyenne`, `médiane` et `rejet des outliers`. *(Terminé)*
 
-    - Pouvoir afficher les images selectionner en cliquant sur un bouton *(En cours)*
-
     - Enregistrer les images empilés en `.png` avec un bouton *(Terminé)*
     
-- Enregistrement des images compilées *(Terminé)*
 - Tester les programmes avec un petits main à l'interieur *(Terminé)*

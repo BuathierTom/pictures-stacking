@@ -32,9 +32,6 @@ def moyenne(image: list):
     plt.colorbar()
     plt.show(block=True)
     
-    
-    
-    
 def median(image: list):
     """
     Fonction qui fais la median des couleurs des images données en paramètre. 
@@ -62,10 +59,10 @@ def median(image: list):
     plt.imshow(final_image)
     plt.colorbar()
     plt.show(block=True)
-    
+        
 if __name__ == '__main__':
     
-    images = ['./fits_tests/ngc7000/NGC-7000_00.fits', './fits_tests/ngc7000/NGC-7000_01.fits']
+    images = ['D:/OneDrive/BUT/SAE/SAE_S3/SAE_C2/SRC/fits_tests/mini/mini0.fits', 'D:/OneDrive/BUT/SAE/SAE_S3/SAE_C2/SRC/fits_tests/mini/mini1.fits']
     print(moyenne(images))
     print(median(images))
     
