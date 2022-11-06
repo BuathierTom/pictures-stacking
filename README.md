@@ -46,4 +46,8 @@ Pour cette maniere d'empilement, nous avons cherché pendant 1 semaine sur inter
     
 - Tester les programmes avec un petits main à l'interieur *(Terminé)*
 
-- Commenter tout le programme pour qu'il soit le plus clair possible *(Terminé)*
+- Commenter tout le programme pour qu'il soit le plus clair possible *(Terminé)
+
+## Organisation :
+
+Nous avons principalement utlisé `GitHub` et `Discord` pour le stockage des données et l'organisation en équipe.
